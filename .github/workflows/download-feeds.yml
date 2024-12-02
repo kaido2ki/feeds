@@ -23,16 +23,8 @@ jobs:
         run: |
           fetch_feed() { curl "${1}" --fail --connect-timeout 10 --max-time 15 --retry 3 --retry-delay 10 --retry-max-time 90 -o "${2}"; }
           
-          fetch_feed "https://notes.aliciasykes.com/feed" "./blog.atom"
-          fetch_feed "https://dev.to/feed/lissy93" "./dev-to.atom"
-          fetch_feed "https://lissy93.blogspot.com/feeds/posts/default" "./blogger.atom"
-          fetch_feed "https://github.com/lissy93.atom" "./github.atom"
-          # fetch_feed "https://nitter.net/lissy_sykes/rss" "./twitter.atom"
-          # fetch_feed "https://nitter.fdn.fr/Lissy_Sykes/rss" "./twitter.atom"
-          fetch_feed "https://stackoverflow.com/feeds/user/979052" "./stackoverflow.atom"
-          fetch_feed "https://reddit.com/user/lissy93/submitted.rss" "./reddit.atom"
-          fetch_feed "https://mastodon.social/users/lissy93.rss" "./mastodon.atom"
-          fetch_feed "https://www.youtube.com/feeds/videos.xml?channel_id=UCY_XiFwLImCn3arzomg8eRA" "./youtube.atom"
+          fetch_feed "https://smj.im/rss.xml" "./blog.atom"
+          fetch_feed "https://dev.to/feed/baddate" "./dev-to.atom"
 
       - name: Commit ✒️
         run: |
